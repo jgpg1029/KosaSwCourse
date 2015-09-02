@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#out {
+	display: none;
+}
+</style>
+
+<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+	var imgNo=1;
+	$(function() {
+		
+		$("#btnHtml").click(function(){
+			$.ajax({
+				url:"ajax07_html.jsp",
+				datatype:"html",
+				success:function(data){
+					$("#ad").html(data);
+				}
+			});
+		});
+		$("#btnjson").click(function(){
+			$.ajax({
+				url:"ajax07_json.jsp",
+				datatype:"json",
+				success:function(data){
+					console.log(data);
+					console.log(data.title);
+					console.log(data.image);
+					var html="";
+					html+='<div style="width:100%; height:100%">';
+					html+='<span style="display:block; height:30px">"';
+					html+=data.title;
+					html+='</span>';
+					html+='<img width="100%" height="110px" src="../common/images/miniroombg/'+data.image+'"/>';
+					html+='</div>';
+					$("#ad").html(html);
+				}
+			});
+		});
+		$("#btnXml").click(function(){
+			$.ajax({
+				url:"ajax07_xml.jsp",
+				datatype:"xml",
+				success:function(data){
+					var titles=data.getElementsByTagName("title");
+					var title=titles[0].innerHTML;
+					console.log(title);
+					
+					var images=data.getElememtsByTagName("image");
+					var image=images[0].innerHTML;
+					console.log(image);
+					var html="";
+					html+='<div style="width:100%; height:100%">';
+					html+='<span style="display:block; height:30px">"';
+					html+=title;
+					html+='</span>';
+					html+='<img width="100%" height="110px" src="../common/images/miniroombg/'+image+'"/>';
+					html+='</div>';
+					$("#ad").html(html);
+				}
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<button id="btnHtml">html로 받기</button>
+	<button id="btnjson">json으로 받기</button>
+	<button id="btnXml">Xml로 받기</button>
+	<div id="ad"
+		style="width: 200px; height: 150px; border: 1px solid black">
+		
+		</div>
+		<hr/>
+		주요내용...
+
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8">
+			<title>Insert title here</title>
+			<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+			<script type="text/javascript">
+			$(function(){
+				//jquery안쓸때
+			var link1=document.querySelector("#link1");
+			link1.onclick=function(event){
+				//event객체가 있다면 event, null일때는 window.event를 리턴
+				event=event||window.event;
+				console.log(evnet);
+				
+				return false;
+			}
+			
+			//jquery쓸때
+				$("#link2").click(function(event){
+					//how1
+					/* console.log("link2-click");
+					return false; */
+					//how2
+					
+					console.log(event);
+					//return false;
+					//return false==
+					event.preventDefault();//drop☆☆default기능을 방지
+				});
+				
+			});
+				
+				/* 
+				function fun1(){
+					console.log("link2-click");
+					return false;
+				} */
+			</script>
+		</head>
+		<body>
+			<a id="link1" href="http://www.naver.com">네이버</a><br/>
+			<!--리턴-->
+			<a id="link2" href="http://www.naver.com">네이버</a>
+		</body>
+	</html>

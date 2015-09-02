@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8">
+			<title>Insert title here</title>
+			<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+			<script type="text/javascript">
+				window.onload=function(){
+					console.log("window-onload");
+				};
+				$(document).ready(function(){
+					console.log("ready");
+				});
+				
+				function imgLoad1(){
+					console.log("img-load1");
+				}
+				
+				function imgLoad2(){
+					console.log("img-load2");
+				}
+			</script>
+		</head>
+		<body>
+			<img onload="imgLoad1()" src="BigBuck.png"/>
+			<img onload="imgLoad2()" src="miniroombg1.gif"/>
+		</body>
+	</html>

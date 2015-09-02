@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8">
+			<title>Insert title here</title>
+			<script src="jquery-1.11.3.min.js"></script>
+			<script>
+				$(function(){
+					var id;
+					$("#btnStart").click(function(){
+					//how1
+						/* 	id=setInterval(function(){
+							console.log("꼬르르르륵");
+						},1000);
+						 */
+					//how2
+						 funStart();
+					});
+					$("#btnEnd").click(function(){
+						//how1
+						
+						//clearInterval(id);
+						
+						
+						//how2
+						clearTimeout(id);
+						
+					});
+					function funStart(){
+						id=setTimeout(funStart,1000);
+					}
+				});
+			</script>
+		</head>
+		<body>
+			<button id="btnStart">Start</button>
+			<button id="btnEnd">End</button>
+			<hr/>
+			<img id="image"/>
+		</body>
+	</html>

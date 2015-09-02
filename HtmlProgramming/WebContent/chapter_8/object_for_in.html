@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8">
+			<title>Insert title here</title>
+			<script type="text/javascript">
+				
+				//객체생성
+				var member={
+						id:"winter",
+						name:"안세은",
+						age:30,
+				};
+				//객체사용
+				console.log(member.id);
+				console.log(member.name);
+				console.log(member.age);
+				console.log("==========");
+				console.log(member["id"]);
+				console.log(member["name"]);
+				console.log(member["age"]);
+				console.log("==========");
+				for(var prop in member){
+					console.log(member[prop]);
+				}
+				
+			</script>
+		
+		</head>
+		<body>
+
+		</body>
+	</html>

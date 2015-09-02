@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8">
+			<title>Insert title here</title>
+			<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+			<script type="text/javascript">
+				$(function(){
+					$("#btn1").click(function(){
+					
+					console.log("btn1-click");
+					});
+					$("#btn2").on("click",function(){
+						
+						console.log("btn2-click");
+						});
+				});
+			</script>
+		</head>
+		<body>
+			<button id="btn1">클래스추가</button>
+			<button id="btn2">클래스추가</button>
+		</body>
+	</html>

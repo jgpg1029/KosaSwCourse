@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8">
+			<title>Insert title here</title>
+			<script type="text/javascript">
+				
+				//변수선언
+				var callback=function(){
+					console.log("함수호출1");
+					
+				};
+				//함수선언
+				function callTenTimes(args){
+					args();
+				}
+				//함수호출
+				
+				callTenTimes(callback);
+				callTenTimes(function(){
+					console.log("함수호출2");
+				});
+			</script>
+		</head>
+		<body>
+
+		</body>
+	</html>

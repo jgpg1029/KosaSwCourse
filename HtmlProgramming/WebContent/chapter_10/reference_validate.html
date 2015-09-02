@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8">
+			<title>Insert title here</title>
+			<script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+			<script type="text/javascript">
+			$(document).ready(function(){
+				$("#joinForm").submit(function(event){
+					var value=$("#userName").val();
+					if(value==""){
+						alert("입력!!");
+						event.preventDefault();
+						
+					}else if(value.replace(/[가-힣]/g,'').length!=0){
+						alert("한글만 입력!!");
+						return false;
+						
+					}
+			});
+			});
+			</script>
+		</head>
+		<body>
+			<form id="joinForm" name="joinForm" action="#">
+				<label>이름</label>
+				<input id="userName" name="userName" type="text" value=""/>
+				<input type="submit"/>
+			</form>
+		</body>
+	</html>

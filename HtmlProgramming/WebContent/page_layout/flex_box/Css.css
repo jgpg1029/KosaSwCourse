@@ -1,0 +1,38 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+
+.fullscreen{
+	display:flex;
+	flex-direction:column;
+	height:100vh;
+}
+
+.top, .bottom{
+	
+	text-align: center;
+	background-color:#c8c8c8;
+}
+
+.middle{
+	flex:1;
+	display:flex;
+	flex-direction:row;
+	text-align: center;
+}
+
+.left{
+	width:150px;
+	background-color:darkgray;
+}
+
+.center{
+	flex:1;
+	background-color: white;
+}
+
+.right{
+	width:150px;
+	background-color:darkgray;
+}

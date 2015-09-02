@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8">
+			<title>Insert title here</title>
+			<title>Insert title here</title>
+			<script src="jquery-1.11.3.min.js"></script>
+			<script>
+				$(function(){
+					$("#btnAdd").on("click",function(){
+						//$("<li>항목</li>");//생성//찾아오기는 "li"
+						//$("#list").append(newLi);
+						//newLi.appendTo($("#list"));	
+						$("#list").append($("<li>항목</li>"));
+						$("<li>항목</li>").appendTo($("#list"));
+					});
+				});
+			</script>
+		</head>
+		<body>
+			<button id="btnAdd">동적 추가</button>
+			<hr/>
+			
+			<ul id="list">
+				
+			</ul>
+		</body>
+	</html>

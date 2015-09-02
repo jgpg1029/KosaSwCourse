@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta charset="UTF-8">
+			<title>Insert title here</title>
+			<script src="jquery-1.11.3.min.js"></script>
+			<script>
+				$(function(){
+					var id;
+					var frames=[];
+					for(var i=0; i<=14;i++){
+						frames[i]=i+".png";
+					}
+					var count=0;
+					$("#btnStart").click(function(){
+						id=setInterval(function(){
+							$("#image").attr(
+									"src",
+									frames[count%frames.length ]);//jQuery에서 이미지 가져오기,속성:attr
+						count++;
+						},1000/20);//초당 20프레임
+					});
+					$("#btnEnd").click(function(){
+						clearInterval(id);
+						
+					});
+				});
+			</script>
+		</head>
+		<body>
+			<button id="btnStart">Start</button>
+			<button id="btnEnd">End</button>
+			<hr/>
+			<img id="image"/>
+		</body>
+	</html>

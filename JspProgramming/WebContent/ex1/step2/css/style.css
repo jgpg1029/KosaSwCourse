@@ -1,0 +1,26 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/css?family=Play);
+@import url(http://fonts.googleapis.com/css?family=Monoton);
+
+/*    Reset CSS  */
+* { margin:0;  padding:0; }
+ol,ul { list-style: none; }
+a { outline:0; text-decoration:none; color:#bbb;}
+img { border:0;}
+body { position:fixed;  width:100%; height:100%; background:#111;}
+
+
+/* 배경동영상 */
+.vid { width:100%; height:100%; position:fixed; top:-60px; left:0px; opacity:0.9; }
+.vid video { width:100%; min-width:1600px; }
+
+
+
+
+
+
+
+
+
+
+

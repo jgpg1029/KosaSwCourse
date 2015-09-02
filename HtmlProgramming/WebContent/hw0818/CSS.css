@@ -1,0 +1,177 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: '맑은 고딕', 'Malgun Gothic',Gothic,sans-serif;
+}
+
+body{
+	width: 960px;
+	margin: 0 auto;
+	background: #E6E6E6;
+	
+}
+
+#page-wrapper{
+	background: white;
+	margin: 40px;
+	padding: 10px 20px;
+	border-radius: 5px;
+	box-shadow: 0px 2px 6px rgba(100, 100, 100, 0.3);
+	
+}
+
+#main-header{
+	/* height: 140px; */
+	padding: 40px 50px;
+}
+
+#main-navigation{
+	border-top:1px solid #C8C8C8;
+	border-bottom:1px solid #C8C8C8;
+	height:40px;
+}
+
+.pull-left{float:left;}
+
+li{list-style:none;}
+
+.outer-menu-item{
+	float:left;
+	position:relative;
+}
+
+.outer-menu-item:hover{
+	backround: black;
+	color: white;
+}
+
+.inner-menu {
+	position:absolute;
+	top: 40px;
+	left: 0px;
+	width: 100%;
+	background: white;
+	bow-shadow: 0 2px 6px rgba(5, 5, 5, 0.9);
+	text-align: center;
+	display: none;
+}
+
+.inner-menu-item > a {
+	display: block;
+	padding: 5px 10px;
+	color: black;
+	text-decoration: none;
+}
+
+.inner-menu-item > a:hover {
+	background: black;
+	color: white;
+}
+
+.menu-title{
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	padding:5px 20px;
+}
+
+
+.master-title{
+	font-size:30px;
+	color:#181818;
+}
+.master-description{
+	font-size: 15px;
+	font-weight: 500;
+	color: #383838;
+}
+
+.pull-right { float:right; }
+
+.search-bar {
+    height: 26px;
+    padding: 7px;
+}
+
+.input-search {
+    border-radius: 15px 0 0 15px;
+    border: 1px solid #CCCCCC;
+    
+    width: 120px; height: 24px;
+    padding: 0 0 0 10px;
+    font-size: 12px;
+    color: #555555;
+}
+
+.input-search:focus {
+	outline: 0;
+}
+
+.input-search-submit {
+	width: 50px; 
+	height: 26px;	
+	border-radius: 0 15px 15px 0;
+	border: 1px solid #CCCCCC;
+	margin-left: -7px;
+	vertical-align: top;
+}
+
+#content{
+	
+	
+}
+.article-header { padding: 20px 0; }
+.article-title { 
+    font-size: 25px;
+    font-weight: 500; 
+    padding-bottom: 10px;
+}
+.article-date { font-size: 13px; }
+
+.article-body {
+    font-size: 14px;
+}
+article { 
+    padding: 0 10px 20px 10px;
+    border-bottom: 1px solid #C8C8C8;
+}
+
+
+#main-section {
+    float: left;
+    width: 630px;
+ 
+}
+
+#main-aside {
+    float: right;
+    width: 200px;
+  
+    
+}
+
+.aside-list { padding: 10px 0 30px 0; }
+.aside-list > h3 {
+    font-size: 15px;
+    font-weight: 600;
+}
+.aside-list li a {
+    margin-left: 8px;
+    font-size: 13px;
+    color: #6C6C6C;
+    text-decoration: none;
+}
+
+
+#main-footer{
+	border-top:1px solid #C8C8C8;
+	height: 50px;
+	clear: both;
+}
+
+#main-footer a {
+	text-decoration: none;
+}
+
+
