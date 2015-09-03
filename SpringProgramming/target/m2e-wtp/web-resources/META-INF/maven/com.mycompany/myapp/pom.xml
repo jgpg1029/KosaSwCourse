@@ -117,27 +117,28 @@
 			<scope>test</scope>
 		</dependency> 
 		
-		<!-- mysql jdbc driver -->
-		<dependency>
-		    <groupId>mysql</groupId>
-		    <artifactId>mysql-connector-java</artifactId>
-		    <version>5.1.36</version>
-		</dependency>
 		
-		<!-- connect pool -->
+		<!-- connection pool -->
 		<dependency>
 		    <groupId>c3p0</groupId>
 		    <artifactId>c3p0</artifactId>
 		    <version>0.9.1.2</version>
 		</dependency>
 		
-		<!-- spring jdbc -->     
+		<!-- spring jdbc support library-->     
 		<dependency>
 		    <groupId>org.springframework</groupId>
 		    <artifactId>spring-jdbc</artifactId>
 		    <version>4.2.0.RELEASE</version>
 		</dependency>
-		  
+		 
+		<!-- mysql jdbc driver -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.36</version>
+		</dependency>
+		
 	</dependencies>
     <build>
         <plugins>
