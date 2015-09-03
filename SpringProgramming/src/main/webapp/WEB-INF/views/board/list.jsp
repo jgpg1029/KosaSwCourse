@@ -92,7 +92,8 @@
 				<a href="list.jsp?pageNo=${startPageNo-pagesPerGroup }">[이전]</a>//컨트롤러에서 만들어줘야할 변수
 				</c:if>
 				
-				<c:forEach var="i" begin="" end="">
+				<c:forEach var="i" begin="${startPageNo }" end="${endPageNo }">
+				</c:forEach>
 					<a class="pageNo" href="list.jsp?pageNo="></a>
 					
 				<a href="list.jsp?pageNo=">[다음]</a>
