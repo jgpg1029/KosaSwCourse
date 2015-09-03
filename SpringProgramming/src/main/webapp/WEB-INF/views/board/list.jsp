@@ -44,6 +44,20 @@
 				color: black;
 				background-color: lightgray;
 			}
+			#pager a{
+					text-decoration:none;
+					color:black;
+					
+				}
+				
+				#pager a:hover{
+					color: green;
+				}
+				
+				#pager a.pageNo{
+					margin-left:5px;
+					margin-right:5px;
+				}
 		</style>
 	</head>
 	
@@ -70,6 +84,24 @@
 			</c:forEach>
 			
 		</table>
+		
+		<div id="pager">
+				
+				<a href="list.jsp?pageNo=1">[처음]</a>
+				
+				<a href="list.jsp?pageNo=">[이전]</a>
+				
+				<%for(int i=boardService.getStartPageNo(groupNo);i<=boardService.getEndPageNo(groupNo);i++) {%>
+				<%=(pageNo==i)?"<b>":""%>
+				
+					<a class="pageNo" href="list.jsp?pageNo=<%=i%>"><%=i%></a>
+					<%=(pageNo==i)?"</b>":""%>
+					<%} %>
+				<%if(groupNo<boardService.getTotalGroupNo()){ %>
+				<a href="list.jsp?pageNo=<%=boardService.getStartPageNo(groupNo+1)%>">[다음]</a>
+				<%} %>
+				<a href="list.jsp?pageNo=<%=boardService.getTotalPageNo()%>">[맨끝]</a>
+			</div>
 		
 		<div id="buttonGroup">
 			<a href="writeForm">글쓰기</a>
