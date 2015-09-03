@@ -44,65 +44,31 @@
 				color: black;
 				background-color: lightgray;
 			}
-			#pager a{
-					text-decoration:none;
-					color:black;
-					
-				}
-				
-				#pager a:hover{
-					color: green;
-				}
-				
-				#pager a.pageNo{
-					margin-left:5px;
-					margin-right:5px;
-				}
 		</style>
 	</head>
 	
 	<body>
-		<h4>게시물 목록</h4>
+		<h4>상품 목록</h4>
 		
 		<table>
 			<tr>
 				<th style="width:50px">번호</th>
-				<th>제목</th>
-				<th style="width:60px">글쓴이</th>
-				<th style="width:80px">날짜</th>
-				<th style="width:60px">조회수</th>
+				<th>상품명</th>
+				<th style="width:60px">가격</th>
 			</tr>
 			
-			<c:forEach var="board" items="${list}">
+			<c:forEach var="product" items="${list}">
 				<tr>
-					<td>${board.no}</td>
-					<td>${board.title}</td>
-					<td>${board.writer}</td>
-					<td>${board.date}</td>
-					<td>${board.hitcount}</td>
+					<td>${product.no}</td>
+					<td>${product.name}</td>
+					<td>${product.price}</td>
 				</tr>
 			</c:forEach>
 			
 		</table>
 		
-		<div id="pager">
-				
-				<a href="list.jsp?pageNo=1">[처음]</a>
-				<c:if test="${groupNo>1 }">
-				<a href="list.jsp?pageNo=${startPageNo-pagesPerGroup }">[이전]</a>
-				</c:if>
-				
-				
-					<a class="pageNo" href="list.jsp?pageNo="></a>
-					
-				<a href="list.jsp?pageNo=">[다음]</a>
-				
-				<a href="list.jsp?pageNo=">[맨끝]</a>
-			</div>
-		
-		
 		<div id="buttonGroup">
-			<a href="writeForm">글쓰기</a>
+			<a href="writeForm">상품추가</a>
 		</div>
 	</body>
 </html>
